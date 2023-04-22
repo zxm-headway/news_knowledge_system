@@ -1,4 +1,14 @@
 import { createApp } from 'vue'
-import App from './App.vue'
 
-createApp(App).mount('#app')
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import 'animate.css'
+import router from './router'
+import App from './App.vue'
+import DividerNews from './components/DividerNews.vue'
+
+const app = createApp(App)
+app.component('DividerNews', DividerNews)
+app.use(router)
+app.use(ElementPlus)
+app.mount('#app')
